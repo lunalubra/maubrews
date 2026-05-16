@@ -20,25 +20,6 @@ const COURSES = [
   },
 ];
 
-const BUNDLES = [
-  {
-    label: "Un curso",
-    price: "200 €",
-    detail: "Elige uno cualquiera de los tres.",
-  },
-  {
-    label: "Dos cursos",
-    price: "320 €",
-    detail: "Cualquier combinación, ahorras 80 €.",
-  },
-  {
-    label: "Bootcamp",
-    price: "200 € / persona",
-    detail:
-      "Los tres cursos en grupo cerrado, en Dosis o en tu local. Para equipos enteros.",
-  },
-];
-
 export function Training() {
   return (
     <section
@@ -68,8 +49,8 @@ export function Training() {
             <Reveal delay={0.06}>
               <p className="lead mt-6 max-w-[52ch]">
                 Tres formaciones modulares. Cógelas sueltas, combínalas
-                o lleva a tu equipo entero al bootcamp. Se imparten en
-                Dosis o, para grupos, en tu local.
+                o lleva a tu equipo entero al bootcamp en grupo. Se
+                imparten en Dosis o, para grupos, en tu local.
               </p>
             </Reveal>
           </div>
@@ -90,42 +71,52 @@ export function Training() {
           ))}
         </div>
 
-        <div className="mt-16 border-t border-ink/25 pt-10">
-          <Reveal>
-            <p className="eyebrow mb-6">Cómo se contrata</p>
-          </Reveal>
-          <ul className="space-y-0">
-            {BUNDLES.map((b, idx) => (
-              <Reveal as="li" key={b.label} delay={idx * 0.05}>
-                <div className="grid grid-cols-1 gap-y-2 border-b border-hairline py-6 sm:grid-cols-12 sm:items-baseline sm:gap-x-10 sm:gap-y-0">
-                  <h4 className="h3 sm:col-span-3">{b.label}</h4>
-                  <p className="text-[0.9375rem] leading-[1.6] text-ink-soft sm:col-span-6">
-                    {b.detail}
-                  </p>
-                  <p
-                    className="display text-[clamp(1.25rem,2vw,1.625rem)] text-ink sm:col-span-3 sm:text-right"
-                    style={{ fontVariationSettings: '"opsz" 48, "SOFT" 30' }}
-                  >
-                    {b.price}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </ul>
-        </div>
-
-        <Reveal delay={0.1}>
-          <div className="mt-16 flex flex-col items-start gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <p className="lead max-w-[44ch] text-ink">
-              ¿Algo más específico? Calibración técnica, masterclass
-              in-house, onboarding completo. También se hace.
-            </p>
-            <a href="/#contacto" className="link-underline text-[0.9375rem]">
-              Solicitar formación a medida
-              <ArrowRight size={14} strokeWidth={1.5} />
-            </a>
+        {/* Engagement CTA — replaces the pricing tier block */}
+        <div className="mt-20 grid grid-cols-1 gap-x-10 gap-y-10 border-t border-ink/25 pt-16 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <Reveal>
+              <p className="eyebrow">Cómo nos coordinamos</p>
+              <h3
+                className="display mt-5 text-[clamp(2rem,4vw,3rem)]"
+                style={{
+                  fontVariationSettings: '"opsz" 144, "SOFT" 60',
+                  lineHeight: 1,
+                }}
+              >
+                Cuéntame qué necesita tu{" "}
+                <span
+                  className="italic"
+                  style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}
+                >
+                  equipo
+                </span>
+                .
+              </h3>
+            </Reveal>
           </div>
-        </Reveal>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <Reveal delay={0.06}>
+              <p className="text-[1.0625rem] leading-[1.65] text-ink-soft">
+                ¿Un solo curso, una combinación de dos, el bootcamp
+                completo para tu equipo? ¿Calibración técnica,
+                masterclass in-house, onboarding desde cero? Cada
+                formación la ajusto al nivel, al espacio y a los
+                tiempos del proyecto.
+              </p>
+              <p className="mt-6 text-[1rem] leading-[1.65] text-ink">
+                Escríbeme con lo que tengas en mente y te paso formato,
+                fechas y presupuesto.
+              </p>
+              <a
+                href="/#contacto"
+                className="btn-primary mt-10"
+              >
+                Pedir información sobre formaciones
+                <ArrowRight className="arrow" size={16} strokeWidth={1.5} />
+              </a>
+            </Reveal>
+          </div>
+        </div>
       </div>
     </section>
   );
