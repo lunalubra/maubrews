@@ -29,11 +29,11 @@ const CATEGORIES: Category[] = [
     items: [
       {
         name: "Máquina de espresso",
-        note: "Slayer (distribuidor oficial), La Marzocco, otras",
+        note: "Slayer (distribuidor oficial), Faema y otras",
       },
       {
         name: "Molinillos",
-        note: "Mahlkönig, Mythos, EK, configuración incluida",
+        note: "Mahlkönig (incluido EK43) y otras, configuración incluida",
       },
       {
         name: "Refrigeración y mobiliario",
