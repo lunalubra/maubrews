@@ -33,7 +33,7 @@ const PRODUCTS: Product[] = [
     credential: "Distribuidor oficial · España",
     body:
       "Máquinas de espresso premium: Steam X, Espresso 1/2/3 groups, Single Group. Soy el distribuidor oficial en España, así que cualquier proyecto Slayer en el país pasa por mí. Asesoramiento, instalación y post-venta.",
-    cta: "Ver catálogo",
+    cta: "Pedir presupuesto",
   },
 ];
 
@@ -47,7 +47,7 @@ export function Products() {
         <div className="grid grid-cols-1 gap-x-10 gap-y-14 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <Reveal>
-              <SectionIndex num="04" label="Productos" tone="dark" />
+              <SectionIndex num="03" label="Productos" tone="dark" />
             </Reveal>
           </div>
           <div className="lg:col-span-9">
@@ -138,12 +138,73 @@ export function Products() {
           ))}
         </div>
 
+        {/* Other brands — editorial sidebar treatment */}
         <Reveal delay={0.1}>
-          <p className="mt-20 max-w-[62ch] text-[0.9375rem] leading-[1.6] text-paper/60">
-            ¿Buscas otra cosa? Trabajo también con otras marcas de
-            molinillos, refrigeración y producto. Pregunta y vemos qué
-            tiene sentido para tu carta.
-          </p>
+          <div className="mt-24 grid grid-cols-1 gap-x-10 gap-y-8 border-t border-paper/20 pt-16 lg:mt-32 lg:grid-cols-12">
+            <header className="lg:col-span-5">
+              <p className="text-[0.6875rem] uppercase tracking-[0.22em] text-paper/55">
+                ¿No es ninguna de estas?
+              </p>
+              <h3
+                className="display mt-5 text-[clamp(2.25rem,4.5vw,3.5rem)] text-paper"
+                style={{
+                  fontVariationSettings: '"opsz" 144, "SOFT" 80',
+                  lineHeight: 1,
+                  letterSpacing: "-0.015em",
+                }}
+              >
+                <span
+                  className="italic"
+                  style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}
+                >
+                  Otra marca
+                </span>
+                <span className="text-mark-quiet">.</span>
+              </h3>
+            </header>
+
+            <div className="space-y-6 lg:col-span-7 lg:pt-4">
+              <p className="text-[1.125rem] leading-[1.6] text-paper/85">
+                Estas tres son las que llevo en el día a día. También
+                trabajo con{" "}
+                <span className="text-paper">
+                  Faema, La Marzocco, Mahlkönig, Mythos, EK
+                </span>{" "}
+                y otras según el proyecto.
+              </p>
+              <p className="text-[1.0625rem] leading-[1.65] text-paper/70">
+                Si lo que necesitas no está en mi catálogo habitual,
+                pregunta. Para proyectos serios, normalmente tiene
+                sentido buscarlo, y mi red de proveedores cubre la
+                mayoría de marcas de la industria.
+              </p>
+              <a
+                href="#contacto"
+                className="group mt-2 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-paper"
+              >
+                <span className="relative">
+                  Preguntar por otra marca
+                  <span
+                    aria-hidden
+                    className="absolute inset-x-0 -bottom-1 h-px origin-left scale-x-0 bg-paper transition-transform duration-500 group-hover:scale-x-100"
+                    style={{
+                      transitionTimingFunction:
+                        "cubic-bezier(0.22, 1, 0.36, 1)",
+                    }}
+                  />
+                </span>
+                <ArrowRight
+                  size={14}
+                  strokeWidth={1.5}
+                  className="transition-transform duration-500 group-hover:translate-x-1"
+                  style={{
+                    transitionTimingFunction:
+                      "cubic-bezier(0.22, 1, 0.36, 1)",
+                  }}
+                />
+              </a>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>

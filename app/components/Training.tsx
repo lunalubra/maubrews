@@ -49,7 +49,7 @@ export function Training() {
         <div className="grid grid-cols-1 gap-x-10 gap-y-14 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <Reveal>
-              <SectionIndex num="06" label="Formación" />
+              <SectionIndex num="05" label="Formación" />
             </Reveal>
           </div>
           <div className="lg:col-span-9">
@@ -82,14 +82,8 @@ export function Training() {
                 <h3 className="h2 text-[clamp(1.5rem,2.4vw,2.25rem)]">
                   {m.title}
                 </h3>
-                <p className="mt-4 max-w-[36ch] grow text-[0.9375rem] leading-[1.6] text-ink-soft">
+                <p className="mt-4 max-w-[36ch] text-[0.9375rem] leading-[1.6] text-ink-soft">
                   {m.body}
-                </p>
-                <p
-                  className="display mt-8 text-[1.875rem] text-ink"
-                  style={{ fontVariationSettings: '"opsz" 72, "SOFT" 30' }}
-                >
-                  200 €
                 </p>
               </article>
             </Reveal>

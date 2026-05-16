@@ -14,7 +14,7 @@ export function Contact() {
         <div className="grid grid-cols-1 gap-x-10 gap-y-14 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <Reveal>
-              <SectionIndex num="07" label="Contacto" />
+              <SectionIndex num="06" label="Contacto" />
             </Reveal>
           </div>
           <div className="lg:col-span-9">

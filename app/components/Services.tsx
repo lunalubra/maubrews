@@ -54,7 +54,7 @@ const CATEGORIES: Category[] = [
         note: "Alpro (Head of Ambassadors) y otras",
       },
       {
-        name: "Matcha, tés y sodas",
+        name: "Matcha y tés",
         note: "Selección por categoría",
       },
       {
@@ -125,10 +125,10 @@ export function Services() {
             </Reveal>
             <Reveal delay={0.06}>
               <p className="lead mt-8 max-w-[56ch]">
-                Estos son los frentes atómicos en los que trabajo.
-                Cógelos sueltos o delégame la composición entera; en
-                cualquier caso, cada combinación te ahorra meses de
-                prueba y error caros.
+                Estos son los frentes en los que trabajo. Tómalos
+                sueltos o delégame la composición entera; en cualquier
+                caso, cada combinación te ahorra meses de prueba y
+                error caros.
               </p>
             </Reveal>
           </div>

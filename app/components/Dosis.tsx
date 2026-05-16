@@ -17,7 +17,7 @@ const FACETS = [
   {
     label: "B2B y e-commerce",
     body:
-      "Distribución a hostelería: café, matcha, maquinaria, sodas. Venta online de café y matcha Dosis, más tostadores invitados.",
+      "Distribución a hostelería: café, matcha y maquinaria. Venta online de café y matcha Dosis a clientes finales en toda España.",
   },
 ];
 
@@ -48,7 +48,7 @@ export function Dosis() {
 
         <div className="lg:col-span-6 lg:pl-6 lg:pt-12">
           <Reveal>
-            <SectionIndex num="05" label="Dosis" />
+            <SectionIndex num="04" label="Dosis" />
           </Reveal>
 
           <Reveal delay={0.06}>
