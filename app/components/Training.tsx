@@ -120,7 +120,7 @@ export function Training() {
               ¿Algo más específico? Calibración técnica, masterclass
               in-house, onboarding completo. También se hace.
             </p>
-            <a href="#contacto" className="link-underline text-[0.9375rem]">
+            <a href="/#contacto" className="link-underline text-[0.9375rem]">
               Solicitar formación a medida
               <ArrowRight size={14} strokeWidth={1.5} />
             </a>

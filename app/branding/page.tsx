@@ -955,7 +955,7 @@ function ComponentsSection() {
           <div className="flex flex-col gap-6 bg-paper p-10">
             <Eyebrow>Primary CTA · light</Eyebrow>
             <div className="py-4">
-              <a href="#contacto" className="btn-primary">
+              <a href="/#contacto" className="btn-primary">
                 Hablemos de tu proyecto
                 <ArrowRight className="arrow" size={16} strokeWidth={1.5} />
               </a>

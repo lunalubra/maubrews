@@ -43,11 +43,11 @@ export function Hero() {
 
           <Reveal delay={0.28}>
             <div className="mt-10 flex flex-wrap items-center gap-7">
-              <a href="#contacto" className="btn-primary">
+              <a href="/#contacto" className="btn-primary">
                 Hablemos de tu proyecto
                 <ArrowRight className="arrow" size={16} strokeWidth={1.5} />
               </a>
-              <a href="#servicios" className="link-underline text-[0.9375rem]">
+              <a href="/#servicios" className="link-underline text-[0.9375rem]">
                 Ver servicios
               </a>
             </div>

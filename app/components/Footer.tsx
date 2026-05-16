@@ -3,12 +3,12 @@ import { InstagramIcon, YouTubeIcon, LinkedInIcon } from "./icons";
 import type { ComponentType } from "react";
 
 const LINKS = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#productos", label: "Productos" },
-  { href: "#dosis", label: "Dosis" },
-  { href: "#formacion", label: "Formación" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#productos", label: "Productos" },
+  { href: "/#dosis", label: "Dosis" },
+  { href: "/#formacion", label: "Formación" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 type IconProps = { size?: number; strokeWidth?: number; className?: string };
@@ -51,7 +51,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-12 lg:gap-x-10">
           <div className="lg:col-span-5">
             <a
-              href="#top"
+              href="/"
               className="display text-[clamp(2.5rem,5vw,4rem)] leading-none tracking-[-0.02em] text-paper"
             >
               maubrews<span className="text-mark-quiet">.</span>

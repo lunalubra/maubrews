@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 
 const LINKS = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#productos", label: "Productos" },
-  { href: "#dosis", label: "Dosis" },
-  { href: "#formacion", label: "Formación" },
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#productos", label: "Productos" },
+  { href: "/#dosis", label: "Dosis" },
+  { href: "/#formacion", label: "Formación" },
 ];
 
 export function Nav() {
@@ -41,7 +41,7 @@ export function Nav() {
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 sm:px-10 lg:px-14">
         <a
-          href="#top"
+          href="/"
           className="display text-[1.5rem] leading-none tracking-[-0.02em] text-ink"
           aria-label="Maubrews — inicio"
         >
@@ -65,7 +65,7 @@ export function Nav() {
 
         <div className="flex items-center gap-3">
           <a
-            href="#contacto"
+            href="/#contacto"
             className="hidden items-center gap-2 border border-ink bg-ink px-4 py-2 text-[0.8125rem] font-medium text-paper transition-colors duration-300 hover:bg-mark-deep hover:border-mark-deep md:inline-flex"
             style={{ borderRadius: 2 }}
           >
@@ -101,7 +101,7 @@ export function Nav() {
                 </a>
               ))}
               <a
-                href="#contacto"
+                href="/#contacto"
                 onClick={() => setOpen(false)}
                 className="mt-4 inline-flex items-center gap-2 self-start border border-ink bg-ink px-5 py-3 text-sm font-medium text-paper"
                 style={{ borderRadius: 2 }}

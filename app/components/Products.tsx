@@ -108,7 +108,7 @@ export function Products() {
 
                 <div className="mt-10">
                   <a
-                    href="#contacto"
+                    href="/#contacto"
                     className="group inline-flex items-center gap-2 text-[0.9375rem] font-medium text-paper"
                   >
                     <span className="relative">
@@ -178,7 +178,7 @@ export function Products() {
                 mayoría de marcas de la industria.
               </p>
               <a
-                href="#contacto"
+                href="/#contacto"
                 className="group mt-2 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-paper"
               >
                 <span className="relative">
