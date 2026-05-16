@@ -3,6 +3,24 @@ import { ArrowUpRight, MapPin } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionIndex } from "./SectionIndex";
 
+const FACETS = [
+  {
+    label: "Cafetería · B2C",
+    body:
+      "Activo propio en Chamberí. Espacio físico de prueba, cata y formación. Abierta todos los días.",
+  },
+  {
+    label: "Tostadero",
+    body:
+      "Tueste propio para Dosis y para proyectos white-label de terceros. Verdes seleccionados origen a origen.",
+  },
+  {
+    label: "B2B y e-commerce",
+    body:
+      "Distribución a hostelería: café, matcha, maquinaria, sodas. Venta online de café y matcha Dosis, más tostadores invitados.",
+  },
+];
+
 export function Dosis() {
   return (
     <section
@@ -13,9 +31,8 @@ export function Dosis() {
         <div className="lg:col-span-6">
           <Reveal>
             <figure className="relative aspect-[4/5] w-full overflow-hidden bg-paper-deep">
-              {/* TODO: replace with real interior shot of Dosis Café */}
               <Image
-                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1400&q=80&auto=format&fit=crop"
+                src="/images/dosis-interior.jpg"
                 alt="Interior de Dosis Café en Chamberí, Madrid"
                 fill
                 sizes="(max-width: 1024px) 100vw, 600px"
@@ -29,14 +46,21 @@ export function Dosis() {
           </Reveal>
         </div>
 
-        <div className="lg:col-span-6 lg:pl-6 lg:pt-24">
+        <div className="lg:col-span-6 lg:pl-6 lg:pt-12">
           <Reveal>
             <SectionIndex num="05" label="Dosis" />
           </Reveal>
 
           <Reveal delay={0.06}>
             <h2 className="h1 mt-8 max-w-[14ch] text-[clamp(2.25rem,5.5vw,4.5rem)]">
-              Mi <span className="italic" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}>laboratorio</span>.
+              Mi{" "}
+              <span
+                className="italic"
+                style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}
+              >
+                laboratorio
+              </span>
+              .
             </h2>
           </Reveal>
 
@@ -50,14 +74,27 @@ export function Dosis() {
               </p>
               <p>
                 Si dudas si alguien con teoría te puede vender humo,
-                visítame. Te invito a un espresso y vemos tu proyecto en
-                la barra.
+                visítame. Te invito a un espresso y vemos tu proyecto
+                en la barra.
               </p>
             </div>
           </Reveal>
 
-          <Reveal delay={0.18}>
-            <div className="mt-12 grid grid-cols-1 gap-8 border-t border-hairline pt-8 sm:grid-cols-2">
+          <Reveal delay={0.16}>
+            <ul className="mt-12 space-y-0 border-t border-hairline">
+              {FACETS.map((f) => (
+                <li key={f.label} className="border-b border-hairline py-5">
+                  <p className="eyebrow text-ink">{f.label}</p>
+                  <p className="mt-2 max-w-[44ch] text-[0.9375rem] leading-[1.55] text-ink-soft">
+                    {f.body}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
               <div>
                 <p className="eyebrow flex items-center gap-2">
                   <MapPin size={12} strokeWidth={1.5} />

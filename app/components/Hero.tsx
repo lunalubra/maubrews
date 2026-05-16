@@ -58,10 +58,9 @@ export function Hero() {
         <div className="relative lg:col-span-5 xl:col-span-5">
           <Reveal delay={0.12} y={36}>
             <figure className="relative ml-auto aspect-[4/5] w-full max-w-[520px] overflow-hidden bg-paper-deep lg:mt-12">
-              {/* TODO: replace with real Maubrews / Dosis shot */}
               <Image
-                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1200&q=80&auto=format&fit=crop"
-                alt="Espresso pulling from a portafilter"
+                src="/images/maubrews-portrait.jpg"
+                alt="Mauricio De Luca, Maubrews, fundador de Dosis Café"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 520px"
@@ -70,7 +69,7 @@ export function Hero() {
             </figure>
             <figcaption className="mt-4 flex items-center justify-end gap-3 text-[0.6875rem] uppercase tracking-[0.18em] text-ink-mute">
               <span className="hairline inline-block h-px w-8" />
-              Dosis Café, Madrid
+              Mauricio De Luca · Dosis, Madrid
             </figcaption>
           </Reveal>
         </div>
