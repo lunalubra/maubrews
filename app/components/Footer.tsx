@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
-import { InstagramIcon } from "./icons";
+import { InstagramIcon, YouTubeIcon, LinkedInIcon } from "./icons";
+import type { ComponentType } from "react";
 
 const LINKS = [
   { href: "#sobre", label: "Sobre" },
@@ -10,13 +11,35 @@ const LINKS = [
   { href: "#contacto", label: "Contacto" },
 ];
 
-const SOCIAL = [
+type IconProps = { size?: number; strokeWidth?: number; className?: string };
+
+type Social = {
+  href: string;
+  label: string;
+  Icon?: ComponentType<IconProps>;
+};
+
+const SOCIAL: Social[] = [
   { href: "https://dosiscafe.es", label: "Dosis Café" },
-  { href: "https://instagram.com/maubrews", label: "Instagram · @maubrews" },
-  { href: "https://instagram.com/dosiscafe", label: "Instagram · @dosiscafe" },
+  {
+    href: "https://instagram.com/maubrews",
+    label: "Instagram · @maubrews",
+    Icon: InstagramIcon,
+  },
+  {
+    href: "https://instagram.com/dosiscafe",
+    label: "Instagram · @dosiscafe",
+    Icon: InstagramIcon,
+  },
+  {
+    href: "https://www.youtube.com/@maubrewscoffeechannel3196",
+    label: "YouTube",
+    Icon: YouTubeIcon,
+  },
   {
     href: "https://www.linkedin.com/in/mauricio-de-luca-kowalski/",
     label: "LinkedIn",
+    Icon: LinkedInIcon,
   },
 ];
 
@@ -67,9 +90,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="link-underline-dark"
                   >
-                    {s.label.startsWith("Instagram") ? (
-                      <InstagramIcon size={13} strokeWidth={1.5} />
-                    ) : null}
+                    {s.Icon ? <s.Icon size={13} strokeWidth={1.5} /> : null}
                     {s.label}
                     <ArrowUpRight size={12} strokeWidth={1.5} />
                   </a>

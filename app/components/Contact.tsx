@@ -2,7 +2,7 @@ import { Reveal } from "./Reveal";
 import { SectionIndex } from "./SectionIndex";
 import { ContactForm } from "./ContactForm";
 import { Mail } from "lucide-react";
-import { InstagramIcon } from "./icons";
+import { InstagramIcon, YouTubeIcon, LinkedInIcon } from "./icons";
 
 export function Contact() {
   return (
@@ -90,11 +90,23 @@ export function Contact() {
                   </li>
                   <li>
                     <a
+                      href="https://www.youtube.com/@maubrewscoffeechannel3196"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline"
+                    >
+                      <YouTubeIcon size={14} strokeWidth={1.5} />
+                      YouTube
+                    </a>
+                  </li>
+                  <li>
+                    <a
                       href="https://www.linkedin.com/in/mauricio-de-luca-kowalski/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-underline"
                     >
+                      <LinkedInIcon size={14} strokeWidth={1.5} />
                       LinkedIn
                     </a>
                   </li>
