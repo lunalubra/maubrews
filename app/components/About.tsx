@@ -2,10 +2,9 @@ import { Reveal } from "./Reveal";
 import { SectionIndex } from "./SectionIndex";
 
 const NUMBERS = [
-  // TODO: confirm real numbers with Maubrews
+  { value: "10+", unit: "asesorías", label: "en cafeterías reales en España" },
+  { value: "100+", unit: "formaciones", label: "impartidas desde Dosis" },
   { value: "4", unit: "años", label: "al frente de Dosis Café" },
-  { value: "120+", unit: "proyectos", label: "asesorados en España" },
-  { value: "600+", unit: "baristas", label: "formados desde 2020" },
 ];
 
 export function About() {

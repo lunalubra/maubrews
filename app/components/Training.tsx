@@ -2,34 +2,40 @@ import { Reveal } from "./Reveal";
 import { SectionIndex } from "./SectionIndex";
 import { ArrowRight } from "lucide-react";
 
-const COURSES = [
+const MODULES = [
   {
-    title: "Barismo · Iniciación",
-    audience: "Para quien empieza detrás de la barra",
-    duration: "1 día",
-    detail:
-      "Café, molienda, espresso, leche texturizada y servicio. La base sobre la que se construye todo lo demás.",
+    title: "Latte art",
+    body:
+      "Texturizado de leche, vertidos base, jarra y servicio. La técnica que se ve en taza.",
   },
   {
-    title: "Calibración técnica",
-    audience: "Para equipos ya formados",
-    duration: "Medio día",
-    detail:
-      "Configuro tu molinillo y tu máquina hasta dejarlas en su punto. Documento los parámetros para que el equipo los reproduzca.",
+    title: "Espresso",
+    body:
+      "Molienda, dosis, extracción, calibración. La base técnica sobre la que se construye todo lo demás.",
   },
   {
-    title: "Onboarding completo",
-    audience: "Para nuevas aperturas",
-    duration: "3 días",
-    detail:
-      "Llevo a tu equipo de cero a operativo. Café, leche, carta, protocolos de servicio, gestión de hora punta.",
+    title: "Filtro",
+    body:
+      "Métodos manuales: V60, Aeropress, Chemex. Cómo elegir grano, molienda y receta para cada uno.",
+  },
+];
+
+const BUNDLES = [
+  {
+    label: "Un módulo",
+    price: "200 €",
+    detail: "Elige uno cualquiera de los tres.",
   },
   {
-    title: "Masterclass in-house",
-    audience: "Para tu equipo, en tu local",
-    duration: "2 horas",
+    label: "Dos módulos",
+    price: "320 €",
+    detail: "Cualquier combinación, ahorras 80 €.",
+  },
+  {
+    label: "Bootcamp",
+    price: "200 € / persona",
     detail:
-      "Formato corto sobre un tema concreto: pour-over, signature drinks, gestión de waste, cata interna.",
+      "Los tres módulos en grupo cerrado, en Dosis o en tu local. Para equipos enteros.",
   },
 ];
 
@@ -49,49 +55,78 @@ export function Training() {
           <div className="lg:col-span-9">
             <Reveal>
               <h2 className="h1 max-w-[18ch] text-[clamp(2rem,5vw,4rem)]">
-                Cursos y formaciones a medida.
+                Tres módulos.
+                <br />
+                <span
+                  className="italic"
+                  style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}
+                >
+                  Un bootcamp.
+                </span>
               </h2>
             </Reveal>
             <Reveal delay={0.06}>
               <p className="lead mt-6 max-w-[52ch]">
-                Cuatro formatos base. Adaptamos el contenido al nivel y
-                al ritmo del equipo. Las formaciones se imparten en
-                Dosis o en tu local.
+                Formaciones modulares. Cógelas sueltas, combínalas o
+                lleva a tu equipo entero al bootcamp. Se imparten en
+                Dosis o, para grupos, en tu local.
               </p>
             </Reveal>
           </div>
         </div>
 
-        <ul className="mt-20 border-t border-hairline">
-          {COURSES.map((course, idx) => (
-            <Reveal as="li" key={course.title} delay={idx * 0.04}>
-              <article className="grid grid-cols-1 gap-y-4 border-b border-hairline py-10 lg:grid-cols-12 lg:gap-x-10">
-                <div className="lg:col-span-5">
-                  <h3 className="h3 text-[clamp(1.25rem,1.8vw,1.625rem)]">
-                    {course.title}
-                  </h3>
-                  <p className="mt-2 text-[0.875rem] text-ink-mute">
-                    {course.audience}
-                  </p>
-                </div>
-                <div className="lg:col-span-2">
-                  <p className="eyebrow text-ink-soft">{course.duration}</p>
-                </div>
-                <div className="lg:col-span-5">
-                  <p className="text-[1rem] leading-[1.6] text-ink-soft">
-                    {course.detail}
-                  </p>
-                </div>
+        {/* Three modules — row of cards */}
+        <div className="mt-20 grid grid-cols-1 gap-x-10 gap-y-2 border-t border-ink/25 md:grid-cols-3">
+          {MODULES.map((m, idx) => (
+            <Reveal key={m.title} delay={idx * 0.05}>
+              <article className="flex h-full flex-col border-b border-hairline pt-8 pb-10 md:border-b-0 md:border-r md:pr-8 last:md:border-r-0">
+                <h3 className="h2 text-[clamp(1.5rem,2.4vw,2.25rem)]">
+                  {m.title}
+                </h3>
+                <p className="mt-4 max-w-[36ch] grow text-[0.9375rem] leading-[1.6] text-ink-soft">
+                  {m.body}
+                </p>
+                <p
+                  className="display mt-8 text-[1.875rem] text-ink"
+                  style={{ fontVariationSettings: '"opsz" 72, "SOFT" 30' }}
+                >
+                  200 €
+                </p>
               </article>
             </Reveal>
           ))}
-        </ul>
+        </div>
+
+        {/* Pricing summary */}
+        <div className="mt-16 border-t border-ink/25 pt-10">
+          <Reveal>
+            <p className="eyebrow mb-6">Cómo se contrata</p>
+          </Reveal>
+          <ul className="space-y-0">
+            {BUNDLES.map((b, idx) => (
+              <Reveal as="li" key={b.label} delay={idx * 0.05}>
+                <div className="grid grid-cols-1 gap-y-2 border-b border-hairline py-6 sm:grid-cols-12 sm:items-baseline sm:gap-x-10 sm:gap-y-0">
+                  <h4 className="h3 sm:col-span-3">{b.label}</h4>
+                  <p className="text-[0.9375rem] leading-[1.6] text-ink-soft sm:col-span-6">
+                    {b.detail}
+                  </p>
+                  <p
+                    className="display text-[clamp(1.25rem,2vw,1.625rem)] text-ink sm:col-span-3 sm:text-right"
+                    style={{ fontVariationSettings: '"opsz" 48, "SOFT" 30' }}
+                  >
+                    {b.price}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
 
         <Reveal delay={0.1}>
           <div className="mt-16 flex flex-col items-start gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <p className="lead max-w-[42ch] text-ink">
-              ¿Otro formato en mente? Si necesitas algo que no está
-              aquí, lo construimos.
+            <p className="lead max-w-[44ch] text-ink">
+              ¿Algo más específico? Calibración técnica, masterclass
+              in-house, onboarding completo. También se hace.
             </p>
             <a href="#contacto" className="link-underline text-[0.9375rem]">
               Solicitar formación a medida

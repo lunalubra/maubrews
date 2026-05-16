@@ -1,50 +1,107 @@
 import { Reveal } from "./Reveal";
 import { SectionIndex } from "./SectionIndex";
+import { ArrowUpRight } from "lucide-react";
 
-const SERVICES = [
-  {
-    n: "01",
-    title: "Selección de maquinaria",
-    body:
-      "Te ayudo a elegir la máquina, los molinillos y el equipo de barra que tu concepto necesita. Sin sobre-ingeniería ni infra-presupuesto.",
-    tag: "Slayer · La Marzocco · Mahlkönig · EK",
+type Group = {
+  label: string;
+  items: { name: string; note?: string }[];
+};
+
+type Brand = {
+  letter: string;
+  name: string;
+  tagline: string;
+  intro: string;
+  groups: Group[];
+  cta?: { label: string; href: string; external?: boolean };
+};
+
+const MAUBREW: Brand = {
+  letter: "A",
+  name: "Maubrew",
+  tagline: "Agencia de hostelería",
+  intro:
+    "La agencia con la que abrimos y profesionalizamos cafeterías de especialidad en España. Modelo mixto: servicios propios donde aporto criterio directo y red de socios delegados para todo lo demás.",
+  groups: [
+    {
+      label: "Núcleo",
+      items: [
+        { name: "Selección y consultoría de equipamiento" },
+        { name: "Distribución de producto clave" },
+        { name: "Tu propia marca de café" },
+      ],
+    },
+    {
+      label: "Delegados",
+      items: [
+        { name: "Branding y marketing" },
+        { name: "Obra civil y construcción" },
+        { name: "Interiorismo" },
+      ],
+    },
+    {
+      label: "Distribución y embajador",
+      items: [
+        { name: "Alpro España", note: "Head of Ambassadors" },
+        { name: "Slayer Espresso España", note: "Distribuidor oficial" },
+      ],
+    },
+    {
+      label: "Extras",
+      items: [
+        { name: "Gestión de eventos" },
+        { name: "Estrategia go-to-market" },
+        { name: "Post-delivery y seguimiento" },
+      ],
+    },
+  ],
+  cta: { label: "Hablemos de tu proyecto", href: "#contacto" },
+};
+
+const DOSIS: Brand = {
+  letter: "B",
+  name: "Dosis",
+  tagline: "Marca y operación",
+  intro:
+    "La marca propia: la cafetería, el tostadero y la línea de distribución. El activo donde se prueba todo lo que después llevamos a otros proyectos.",
+  groups: [
+    {
+      label: "Cafetería · B2C",
+      items: [
+        { name: "Dosis Café", note: "Chamberí, Madrid · desde 2022" },
+      ],
+    },
+    {
+      label: "Distribución · B2B",
+      items: [
+        { name: "Café de especialidad" },
+        { name: "Matcha" },
+        { name: "Maquinaria de espresso y molinillos" },
+        { name: "Sodas", note: "Juno" },
+      ],
+    },
+    {
+      label: "E-commerce",
+      items: [
+        { name: "Café Dosis y Matcha Dosis" },
+        { name: "Cafés de tostadores invitados" },
+      ],
+    },
+    {
+      label: "Formación",
+      items: [
+        { name: "Cursos especializados", note: "Ver más abajo ↓" },
+      ],
+    },
+  ],
+  cta: {
+    label: "Visitar dosiscafe.es",
+    href: "https://dosiscafe.es",
+    external: true,
   },
-  {
-    n: "02",
-    title: "Selección de producto",
-    body:
-      "Café, leche, bebidas vegetales, matcha. Defino contigo qué entra a tu carta y por qué, con criterio de barista y de operador.",
-    tag: "Sourcing · Cata · Negociación",
-  },
-  {
-    n: "03",
-    title: "Cartas y signature drinks",
-    body:
-      "Diseñamos la carta como una identidad. Bebidas firma que sean tuyas, no plantillas de Pinterest.",
-    tag: "Identidad · Estacionalidad · Coste",
-  },
-  {
-    n: "04",
-    title: "Head hunting",
-    body:
-      "Busco, entrevisto y filtro al talento barista para que tú solo veas a los candidatos que realmente encajan.",
-    tag: "Baristas · Encargados · Jefes de barra",
-  },
-  {
-    n: "05",
-    title: "Formación del equipo",
-    body:
-      "Configuro molinillo y máquina, formo a tu equipo desde cero o nivelo al que ya tienes. Cursos a medida.",
-    tag: "Onboarding · Calibración · Cursos in-house",
-  },
-  {
-    n: "06",
-    title: "Distribución de barra",
-    body:
-      "Diseño el layout para que el flujo de trabajo sea fluido en hora punta. La barra es la cocina del café, se piensa antes de instalarse.",
-    tag: "Layout · Flujo · Ergonomía",
-  },
-];
+};
+
+const BRANDS = [MAUBREW, DOSIS];
 
 export function Services() {
   return (
@@ -61,49 +118,105 @@ export function Services() {
           </div>
           <div className="lg:col-span-9">
             <Reveal>
-              <h2 className="h1 max-w-[16ch] text-[clamp(2rem,5vw,4rem)]">
-                Lo que delegas en mí.
+              <h2 className="h1 max-w-[14ch] text-[clamp(2rem,5vw,4rem)]">
+                Dos casas.
+                <br />
+                <span
+                  className="italic"
+                  style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}
+                >
+                  Un criterio.
+                </span>
               </h2>
             </Reveal>
             <Reveal delay={0.06}>
-              <p className="lead mt-6 max-w-[52ch]">
-                Seis frentes en los que un consultor con barra propia te
-                ahorra meses de prueba y error. Tomas las decisiones, yo
-                pongo el criterio.
+              <p className="lead mt-6 max-w-[56ch]">
+                Trabajo desde dos marcas. Maubrew es la agencia con la
+                que aterrizamos proyectos ajenos. Dosis es donde aplico
+                cada día lo que en Maubrew vendemos: cafetería, tostadero,
+                distribución y formación.
               </p>
             </Reveal>
           </div>
         </div>
 
-        <ul className="mt-20 border-t border-hairline">
-          {SERVICES.map((s, idx) => (
-            <Reveal as="li" key={s.n} delay={Math.min(idx * 0.04, 0.16)}>
-              <article className="group grid grid-cols-1 gap-x-10 gap-y-6 border-b border-hairline py-10 transition-colors duration-500 hover:bg-paper-deep/40 sm:py-12 lg:grid-cols-12 lg:py-14">
-                <div className="lg:col-span-2">
+        <div className="mt-20 grid grid-cols-1 gap-x-12 gap-y-20 lg:grid-cols-2">
+          {BRANDS.map((brand, idx) => (
+            <Reveal key={brand.name} delay={idx * 0.08}>
+              <article className="relative h-full border-t border-ink/25 pt-10">
+                <div className="flex items-baseline gap-5">
                   <span
                     className="text-mark font-medium tabular-nums tracking-[0.18em]"
                     style={{ fontSize: "0.8125rem" }}
                   >
-                    / {s.n}
+                    / {brand.letter}
+                  </span>
+                  <span className="eyebrow text-ink-soft">
+                    {brand.tagline}
                   </span>
                 </div>
-                <div className="lg:col-span-5">
-                  <h3
-                    className="h2 max-w-[16ch] text-[clamp(1.5rem,2.4vw,2.25rem)]"
-                  >
-                    {s.title}
-                  </h3>
-                </div>
-                <div className="lg:col-span-5">
-                  <p className="text-[1rem] leading-[1.65] text-ink-soft lg:text-[1.0625rem]">
-                    {s.body}
-                  </p>
-                  <p className="eyebrow mt-5 text-ink-mute">{s.tag}</p>
-                </div>
+
+                <h3
+                  className="display mt-6 text-[clamp(2.75rem,5.5vw,4.5rem)]"
+                  style={{
+                    fontVariationSettings: '"opsz" 144, "SOFT" 40',
+                    lineHeight: 0.95,
+                  }}
+                >
+                  {brand.name}
+                  <span className="text-mark">.</span>
+                </h3>
+
+                <p className="mt-6 max-w-[42ch] text-[1.0625rem] leading-[1.65] text-ink-soft">
+                  {brand.intro}
+                </p>
+
+                <dl className="mt-12 space-y-8">
+                  {brand.groups.map((group) => (
+                    <div key={group.label} className="border-t border-hairline pt-5">
+                      <dt className="eyebrow text-ink">
+                        {group.label}
+                      </dt>
+                      <dd className="mt-3">
+                        <ul className="space-y-2.5 text-[1rem] leading-snug text-ink">
+                          {group.items.map((item) => (
+                            <li
+                              key={item.name}
+                              className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1"
+                            >
+                              <span>{item.name}</span>
+                              {item.note && (
+                                <span className="text-[0.8125rem] text-ink-mute">
+                                  {item.note}
+                                </span>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+
+                {brand.cta && (
+                  <div className="mt-12">
+                    <a
+                      href={brand.cta.href}
+                      target={brand.cta.external ? "_blank" : undefined}
+                      rel={brand.cta.external ? "noopener noreferrer" : undefined}
+                      className="link-underline text-[0.9375rem]"
+                    >
+                      {brand.cta.label}
+                      {brand.cta.external ? (
+                        <ArrowUpRight size={14} strokeWidth={1.5} />
+                      ) : null}
+                    </a>
+                  </div>
+                )}
               </article>
             </Reveal>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
