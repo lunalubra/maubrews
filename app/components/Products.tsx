@@ -74,10 +74,16 @@ export function Products() {
           </div>
         </div>
 
-        <div className="mt-24 grid grid-cols-1 gap-x-0 border-t border-paper/20 md:grid-cols-3 lg:mt-32">
+        <div className="mt-24 grid grid-cols-1 gap-x-12 gap-y-0 border-t border-paper/20 md:grid-cols-3 lg:mt-32 lg:gap-x-20">
           {PRODUCTS.map((p, idx) => (
             <Reveal key={p.brand} delay={idx * 0.06}>
-              <article className="flex h-full flex-col border-b border-paper/15 pb-12 pt-12 md:border-b-0 md:border-r md:px-10 md:[&:first-child]:pl-0 md:[&:last-child]:border-r-0 md:[&:last-child]:pr-0">
+              <article className="relative flex h-full flex-col border-b border-paper/15 pt-12 pb-12 md:border-b-0">
+                {idx < PRODUCTS.length - 1 && (
+                  <span
+                    aria-hidden
+                    className="absolute top-12 bottom-12 -right-6 hidden w-px bg-paper/15 md:block lg:-right-10"
+                  />
+                )}
                 <p className="text-[0.6875rem] uppercase tracking-[0.22em] text-paper/55">
                   {p.category}
                 </p>
