@@ -32,8 +32,8 @@ export function Dosis() {
           <Reveal>
             <figure className="relative aspect-[4/5] w-full overflow-hidden bg-paper-deep">
               <Image
-                src="/images/dosis-interior.jpg"
-                alt="Interior de Dosis Café en Chamberí, Madrid"
+                src="/images/dosis-storefront.jpg"
+                alt="Fachada de Dosis Café en Chamberí, Madrid"
                 fill
                 sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover"

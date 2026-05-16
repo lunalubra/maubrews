@@ -1191,8 +1191,8 @@ function PhotographySection() {
             <figure>
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-paper-deep">
                 <Image
-                  src="/images/dosis-interior.jpg"
-                  alt="Interior de Dosis Café"
+                  src="/images/dosis-storefront.jpg"
+                  alt="Fachada de Dosis Café"
                   fill
                   sizes="(max-width: 768px) 100vw, 600px"
                   className="object-cover"
@@ -1200,7 +1200,7 @@ function PhotographySection() {
               </div>
               <figcaption className="mt-4 flex items-baseline justify-between gap-4">
                 <p className="text-[0.9375rem] text-ink">
-                  Interior · Dosis Chamberí
+                  Fachada · Dosis Chamberí
                 </p>
                 <p className="text-[0.75rem] uppercase tracking-[0.22em] text-ink-mute">
                   Dosis section
