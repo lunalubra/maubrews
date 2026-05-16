@@ -2,7 +2,7 @@ import { Reveal } from "./Reveal";
 import { SectionIndex } from "./SectionIndex";
 import { ArrowRight } from "lucide-react";
 
-const MODULES = [
+const COURSES = [
   {
     title: "Latte art",
     body:
@@ -22,12 +22,12 @@ const MODULES = [
 
 const BUNDLES = [
   {
-    label: "Un módulo",
+    label: "Un curso",
     price: "200 €",
     detail: "Elige uno cualquiera de los tres.",
   },
   {
-    label: "Dos módulos",
+    label: "Dos cursos",
     price: "320 €",
     detail: "Cualquier combinación, ahorras 80 €.",
   },
@@ -35,7 +35,7 @@ const BUNDLES = [
     label: "Bootcamp",
     price: "200 € / persona",
     detail:
-      "Los tres módulos en grupo cerrado, en Dosis o en tu local. Para equipos enteros.",
+      "Los tres cursos en grupo cerrado, en Dosis o en tu local. Para equipos enteros.",
   },
 ];
 
@@ -43,7 +43,7 @@ export function Training() {
   return (
     <section
       id="formacion"
-      className="relative border-t border-hairline py-24 sm:py-32 lg:py-40"
+      className="relative bg-paper-deep py-24 sm:py-32 lg:py-40"
     >
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-14">
         <div className="grid grid-cols-1 gap-x-10 gap-y-14 lg:grid-cols-12">
@@ -55,7 +55,7 @@ export function Training() {
           <div className="lg:col-span-9">
             <Reveal>
               <h2 className="h1 max-w-[18ch] text-[clamp(2rem,5vw,4rem)]">
-                Tres módulos.
+                Tres cursos.
                 <br />
                 <span
                   className="italic"
@@ -67,17 +67,16 @@ export function Training() {
             </Reveal>
             <Reveal delay={0.06}>
               <p className="lead mt-6 max-w-[52ch]">
-                Formaciones modulares. Cógelas sueltas, combínalas o
-                lleva a tu equipo entero al bootcamp. Se imparten en
+                Tres formaciones modulares. Cógelas sueltas, combínalas
+                o lleva a tu equipo entero al bootcamp. Se imparten en
                 Dosis o, para grupos, en tu local.
               </p>
             </Reveal>
           </div>
         </div>
 
-        {/* Three modules — row of cards */}
         <div className="mt-20 grid grid-cols-1 gap-x-10 gap-y-2 border-t border-ink/25 md:grid-cols-3">
-          {MODULES.map((m, idx) => (
+          {COURSES.map((m, idx) => (
             <Reveal key={m.title} delay={idx * 0.05}>
               <article className="flex h-full flex-col border-b border-hairline pt-8 pb-10 md:border-b-0 md:border-r md:pr-8 last:md:border-r-0">
                 <h3 className="h2 text-[clamp(1.5rem,2.4vw,2.25rem)]">
@@ -97,7 +96,6 @@ export function Training() {
           ))}
         </div>
 
-        {/* Pricing summary */}
         <div className="mt-16 border-t border-ink/25 pt-10">
           <Reveal>
             <p className="eyebrow mb-6">Cómo se contrata</p>

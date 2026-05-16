@@ -8,7 +8,7 @@ export function Contact() {
   return (
     <section
       id="contacto"
-      className="relative bg-paper-deep py-24 sm:py-32 lg:py-40"
+      className="relative border-t border-hairline bg-paper py-24 sm:py-32 lg:py-40"
     >
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-14">
         <div className="grid grid-cols-1 gap-x-10 gap-y-14 lg:grid-cols-12">

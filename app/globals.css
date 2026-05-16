@@ -145,6 +145,15 @@
   .section-index .label {
     color: var(--color-ink-soft);
   }
+  .section-index-dark .num {
+    color: var(--color-mark-quiet);
+  }
+  .section-index-dark .slash {
+    color: oklch(0.965 0.008 60 / 0.25);
+  }
+  .section-index-dark .label {
+    color: oklch(0.965 0.008 60 / 0.7);
+  }
 
   /* Primary button */
   .btn-primary {

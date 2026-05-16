@@ -12,7 +12,7 @@ const FACETS = [
   {
     label: "Tostadero",
     body:
-      "Tueste propio para Dosis y para proyectos white-label de terceros. Verdes seleccionados origen a origen.",
+      "Tueste propio en Madrid desde 2022. Verdes seleccionados origen a origen, perfilados in-house por nuestro equipo.",
   },
   {
     label: "B2B y e-commerce",
