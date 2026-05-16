@@ -38,7 +38,7 @@ export function ContactForm() {
     } catch {
       setStatus("error");
       setError(
-        "No se ha podido enviar. Escríbeme directamente a hola@maubrews.com.",
+        "No se ha podido enviar. Escríbeme directamente a gestiondosiscafe@gmail.com.",
       );
     }
   }
@@ -62,8 +62,8 @@ export function ContactForm() {
             <p className="mt-3 max-w-[44ch] text-[1rem] leading-[1.6] text-ink-soft">
               Te respondo personalmente en menos de 48 horas, normalmente
               antes. Si es urgente, escribe a{" "}
-              <a href="mailto:hola@maubrews.com" className="link-underline">
-                hola@maubrews.com
+              <a href="mailto:gestiondosiscafe@gmail.com" className="link-underline">
+                gestiondosiscafe@gmail.com
               </a>
               .
             </p>

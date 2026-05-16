@@ -45,16 +45,20 @@ export function Contact() {
                 <ul className="mt-4 space-y-3 text-[1rem] text-ink">
                   <li>
                     <a
-                      href="mailto:hola@maubrews.com"
+                      href="mailto:gestiondosiscafe@gmail.com"
                       className="link-underline"
                     >
                       <Mail size={14} strokeWidth={1.5} />
-                      hola@maubrews.com
+                      gestiondosiscafe@gmail.com
                     </a>
                   </li>
-                  <li className="text-ink-soft">
-                    {/* TODO: confirmar número de contacto */}
-                    +34 6XX XXX XXX
+                  <li>
+                    <a
+                      href="tel:+34674769601"
+                      className="link-underline"
+                    >
+                      +34 674 769 601
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -62,6 +66,17 @@ export function Contact() {
               <div>
                 <p className="eyebrow">Redes</p>
                 <ul className="mt-4 space-y-3 text-[1rem]">
+                  <li>
+                    <a
+                      href="https://instagram.com/maubrews"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline"
+                    >
+                      <InstagramIcon size={14} strokeWidth={1.5} />
+                      @maubrews
+                    </a>
+                  </li>
                   <li>
                     <a
                       href="https://instagram.com/dosiscafe"
@@ -74,11 +89,14 @@ export function Contact() {
                     </a>
                   </li>
                   <li>
-                    {/* TODO: añadir Instagram personal de Maubrews */}
-                    <span className="inline-flex items-center gap-2 text-ink-mute">
-                      <InstagramIcon size={14} strokeWidth={1.5} />
-                      @maubrews
-                    </span>
+                    <a
+                      href="https://www.linkedin.com/in/mauricio-de-luca-kowalski/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline"
+                    >
+                      LinkedIn
+                    </a>
                   </li>
                 </ul>
               </div>

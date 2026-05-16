@@ -167,10 +167,9 @@ export function Products() {
               <p className="text-[1.125rem] leading-[1.6] text-paper/85">
                 Estas tres son las que llevo en el día a día. También
                 trabajo con{" "}
-                <span className="text-paper">
-                  Faema, La Marzocco, Mahlkönig, Mythos, EK
-                </span>{" "}
-                y otras según el proyecto.
+                <span className="text-paper">Faema</span> y{" "}
+                <span className="text-paper">Mahlkönig</span>, entre
+                otras, según el proyecto.
               </p>
               <p className="text-[1.0625rem] leading-[1.65] text-paper/70">
                 Si lo que necesitas no está en mi catálogo habitual,

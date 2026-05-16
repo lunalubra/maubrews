@@ -207,6 +207,31 @@
     transform: scaleX(1);
   }
 
+  /* Underline reveal for dark backgrounds */
+  .link-underline-dark {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--color-paper);
+    font-weight: 500;
+  }
+  .link-underline-dark::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 1px;
+    background-color: var(--color-paper);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 350ms var(--ease-out-quart);
+  }
+  .link-underline-dark:hover::after {
+    transform: scaleX(1);
+  }
+
   /* Form field — borderless except bottom rule */
   .field {
     display: block;
