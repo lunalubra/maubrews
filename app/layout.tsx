@@ -15,7 +15,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const SITE_URL = "https://maubrews.com";
+const SITE_URL = "https://www.maubrews.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
