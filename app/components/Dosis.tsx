@@ -48,7 +48,7 @@ export function Dosis() {
 
         <div className="lg:col-span-6 lg:pl-6 lg:pt-12">
           <Reveal>
-            <SectionIndex num="04" label="Dosis" />
+            <SectionIndex num="05" label="Dosis" />
           </Reveal>
 
           <Reveal delay={0.06}>

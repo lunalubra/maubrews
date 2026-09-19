@@ -19,11 +19,15 @@ Sin backend dedicado: la ruta `/api/contact` es un placeholder que valida y regi
 ```
 app/
   api/contact/route.ts     Route handler stub (valida + logea)
+  casos/
+    data.ts                Contenido tipado de los casos (Orígenes, Casona)
+    [slug]/page.tsx        Página completa de cada caso (SSG via generateStaticParams)
   components/
     Nav.tsx                Sticky con scroll state + nav móvil
     Hero.tsx               Headline + foto asimétrica + CTA
     About.tsx              Bio + cifras
     Services.tsx           Seis servicios sin grid de cards
+    Cases.tsx              Casos de estudio: previews alternados con foto + link
     Process.tsx            Cuatro pasos
     Partnerships.tsx       Alpro + Slayer como credenciales tipográficas
     Dosis.tsx              Sección laboratorio + dirección + link externo

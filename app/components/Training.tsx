@@ -32,7 +32,7 @@ export function Training() {
         <div className="grid grid-cols-1 gap-x-10 gap-y-14 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <Reveal>
-              <SectionIndex num="05" label="Formación" />
+              <SectionIndex num="06" label="Formación" />
             </Reveal>
           </div>
           <div className="lg:col-span-9">

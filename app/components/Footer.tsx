@@ -5,6 +5,7 @@ import type { ComponentType } from "react";
 const LINKS = [
   { href: "/#sobre", label: "Sobre" },
   { href: "/#servicios", label: "Servicios" },
+  { href: "/#casos", label: "Casos" },
   { href: "/#productos", label: "Productos" },
   { href: "/#dosis", label: "Dosis" },
   { href: "/#formacion", label: "Formación" },

@@ -47,7 +47,7 @@ export function Products() {
         <div className="grid grid-cols-1 gap-x-10 gap-y-14 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <Reveal>
-              <SectionIndex num="03" label="Productos" tone="dark" />
+              <SectionIndex num="04" label="Productos" tone="dark" />
             </Reveal>
           </div>
           <div className="lg:col-span-9">
